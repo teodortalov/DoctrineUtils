@@ -1,5 +1,5 @@
 {
-        "name" : "mdcallinone/doctrine-utils",
+        "name" : "mdcallinone/DoctrineUtils",
         "require" : {
                 "php" : ">=5.3.0"
         }
