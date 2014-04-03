@@ -1,0 +1,6 @@
+{
+        "name" : "mdcallinone/doctrine-utils",
+        "require" : {
+                "php" : ">=5.3.0"
+        }
+}
