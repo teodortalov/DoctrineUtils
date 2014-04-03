@@ -71,14 +71,15 @@ class EntitySerializer
 
         foreach ($metadata->fieldMappings as $field => $mapping) {
             $value = $metadata->reflFields[$field]->getValue($entity);
+            $originalField = $field;
             $field = Inflector::tableize($field);
             if ($value instanceof \DateTime) {
                 // We cast DateTime to array to keep consistency with array result
-                $data[$field] = (array)$value;
+                $data[$originalField] = (array)$value;
             } elseif (is_object($value)) {
-                $data[$field] = (string)$value;
+                $data[$originalField] = (string)$value;
             } else {
-                $data[$field] = $value;
+                $data[$originalField] = $value;
             }
         }
 
