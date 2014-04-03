@@ -16,7 +16,7 @@
  * @package     Mdc\Doctrine
  */
 
-namespace MDC\DoctrineUtils;
+namespace DoctrineUtils;
 
 use Doctrine\ORM\Mapping\ClassMetadata,
     Doctrine\Common\Util\Inflector,
