@@ -85,7 +85,7 @@ class EntitySerializer
 
         foreach ($metadata->associationMappings as $field => $mapping) {
             $key = Inflector::tableize($field);
-            if (!$mapping['isCascadeDetach']) {
+            if ($mapping['isCascadeDetach']) {
                 $data[$key] = $metadata->reflFields[$field]->getValue($entity);
                 if (null !== $data[$key]) {
                     $data[$key] = $this->_serializeEntity($data[$key]);
